@@ -46,3 +46,65 @@ Compilation
 
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
+
+Understanding printf:
+
+The printf function in C is used to display output to the console or file, using a formatted string as the first argument. The formatted string can contain conversion specifiers, which begin with a percent sign ("%") and are followed by a character that determines the type of the argument to be displayed.
+
+Here's a list of the conversion specifiers in printf:
+
+- %d or %i: Display an integer in decimal format. The difference between %d and %i is only in the interpretation of the argument.
+
+- %o: Display an integer in octal (base 8) format.
+
+- %x or %X: Display an integer in hexadecimal (base 16) format, with lowercase or uppercase letters, respectively.
+
+- %u: Display an unsigned integer in decimal format.
+
+- %c: Display a character.
+
+- %s: Display a null-terminated string.
+
+- %f: Display a floating-point number in decimal format.
+
+- %e or %E: Display a floating-point number in scientific notation, with lowercase or uppercase letters, respectively.
+
+- %g or %G: Display a floating-point number in either decimal or scientific notation, depending on its magnitude.
+
+- %p: Display a pointer address in hexadecimal format.
+
+Let's take a closer look at each conversion specifier.
+
+%d or %i:
+These two specifiers are used to display signed integers in decimal format. The difference between %d and %i is that %i interprets the argument as an integer in either decimal, octal, or hexadecimal format, depending on its prefix (if any). Both specifiers expect an int argument.
+
+%o:
+This specifier is used to display unsigned integers in octal (base 8) format. It expects an unsigned int argument.
+
+%x or %X:
+These specifiers are used to display unsigned integers in hexadecimal (base 16) format, with lowercase or uppercase letters, respectively. They expect an unsigned int argument.
+
+%u:
+This specifier is used to display unsigned integers in decimal format. It expects an unsigned int argument.
+
+%c:
+This specifier is used to display a single character. It expects an int argument, which is interpreted as an ASCII code.
+
+%s:
+This specifier is used to display a null-terminated string. It expects a char* argument, which points to the first character of the string.
+
+%f:
+This specifier is used to display floating-point numbers in decimal format. It expects a double argument.
+
+%e or %E:
+These specifiers are used to display floating-point numbers in scientific notation, with lowercase or uppercase letters, respectively. They expect a double argument.
+
+%g or %G:
+These specifiers are used to display floating-point numbers in either decimal or scientific notation, depending on their magnitude. They expect a double argument.
+
+%p:
+This specifier is used to display pointer addresses in hexadecimal format. It expects a void* argument, which points to the address to be displayed.
+
+In addition to the conversion specifiers, the formatted string can also contain other characters, such as spaces, tabs, newlines, and literal percent signs ("%"). To include a literal percent sign in the output, you need to use "%%".
+
+In conclusion, the printf function in C is a powerful tool for displaying formatted output to the console or file. Its conversion specifiers allow you to display a wide range of data types and formats, and its flexibility makes it a popular choice for debugging and general-purpose output.
